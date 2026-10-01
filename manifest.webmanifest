@@ -2,20 +2,20 @@
   "name": "Guàrdia · Quadrant i judicis",
   "short_name": "Guàrdia",
   "description": "Calendari de torns i gestió personal en hores",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#eaf0f7",
   "theme_color": "#11284c",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
