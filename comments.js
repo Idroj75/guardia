@@ -187,16 +187,18 @@
     day.append(marker);
   }
 
-  $id('calendarCommentsShortcut').addEventListener('click', () => {
-    const selectedDate = selected instanceof Date && selected.getFullYear() === current.getFullYear() && selected.getMonth() === current.getMonth() ? key(selected) : today();
-    const date = selectedDate < today() ? today() : selectedDate;
+  function openNewDate(date) {
+    if (date < today()) {
+      window.GuardiaCalendarMessage?.('No es poden crear tickets en dies passats.', true);
+      return;
+    }
     reset(date);
     dialog.showModal();
     input.focus({preventScroll:true});
-  });
+  }
   $id('commentDialogClose').addEventListener('click', () => dialog.close());
   $id('commentCancel').addEventListener('click', () => { reset(); dialog.close(); });
-  window.GuardiaComments = {decorateDay,refresh,openEdit(id){const row=rows().find(item=>item.id===id);if(row)edit(row)}};
+  window.GuardiaComments = {decorateDay,refresh,openNewDate,openEdit(id){const row=rows().find(item=>item.id===id);if(row)edit(row)}};
   reset();
   refresh();
   render();

@@ -9,6 +9,7 @@
   const eraseButton = get('calendarPaintErase');
   const editButton = get('calendarPaintEdit');
   const consultButton = get('calendarPaintConsult');
+  const commentsButton = get('calendarCommentsShortcut');
   const feedback = get('calendarPaintFeedback');
   const eraseDialog = get('calendarEraseDialog');
   const eraseList = get('calendarEraseList');
@@ -58,6 +59,7 @@
     editButton.setAttribute('aria-pressed', String(mode === 'edit'));
     consultButton.setAttribute('aria-pressed', String(mode === 'consult'));
     eraseButton.setAttribute('aria-pressed', String(mode === 'erase'));
+    commentsButton.setAttribute('aria-pressed', String(mode === 'comments'));
     eraseButton.textContent = mode === 'erase' ? '✓ Esborrant dies' : '⌫ Esborrar dia';
 
   }
@@ -313,6 +315,13 @@
   get('days').addEventListener('click', event => {
     const day = event.target.closest('button.day[data-calendar-date]');
     if (!day || !get('days').contains(day)) return;
+    if (mode === 'comments') {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      selected = new Date(day.dataset.calendarDate + 'T12:00:00');
+      window.GuardiaComments?.openNewDate(day.dataset.calendarDate);
+      return;
+    }
     if (mode === 'edit') {
       get('dayEditForm').hidden = false;
       get('dayIntervals').hidden = false;
@@ -347,7 +356,7 @@
   });
   select.addEventListener('focus', refresh);
   undoButton.addEventListener('click', () => window.GuardiaUndo?.undo());
-  for (const [button, target] of [[editButton, 'edit'], [consultButton, 'consult'], [eraseButton, 'erase']]) button.addEventListener('click', () => {
+  for (const [button, target] of [[editButton, 'edit'], [consultButton, 'consult'], [eraseButton, 'erase'], [commentsButton, 'comments']]) button.addEventListener('click', () => {
     mode = target;
     select.value = '__choose__';
     addMode = false;
