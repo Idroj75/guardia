@@ -1,0 +1,30 @@
+/* Calendar brush replaces the separate quadrant tab; detailed editing remains in the day dialog. */
+main:has(#calendar.active)>header{display:none}
+#calendar .calendar-paint-controls{display:flex;align-items:end;gap:8px;flex-wrap:wrap;padding:10px 9px 13px;background:#102a51;color:#eef3fa}
+#calendar .calendar-paint-controls label{display:grid;gap:5px;font-size:12px;font-weight:700}
+#calendar .calendar-paint-controls [hidden]{display:none!important}
+#calendar .calendar-paint-controls label:first-child{flex:1 1 170px;min-width:0}
+#calendar .calendar-paint-controls select,#calendar .calendar-paint-controls input{width:100%;min-height:42px;box-sizing:border-box;padding:7px;border:1px solid #8496a9;border-radius:8px;background:#cfd5df;color:#172b43;font-size:15px}
+#calendar .calendar-paint-controls #calendarPaintHoursWrap{width:74px;flex:none}
+#calendar .calendar-paint-controls button{min-height:41px;border:1px solid #9db2c7;border-radius:8px;padding:7px 10px;background:#cfd5df;color:#173250;font-size:13px;font-weight:750}
+#calendar .calendar-paint-controls button[aria-pressed=true]{background:#25446d;border-color:#355d89;border-left:4px solid #d54451;color:#fff;padding-left:7px}
+#calendar .calendar-mode-actions{display:flex;gap:6px;width:100%}
+#calendar .calendar-mode-actions button{flex:1 1 0;min-width:0}
+#calendarConsultDetails{padding:8px 12px;border-radius:8px;background:#eef3fa;color:#172b43}
+#calendarConsultDetails ul{margin:4px 0;padding-left:20px}
+#calendarConsultDetails li{margin:5px 0}
+.day-dialog [hidden]{display:none!important}
+.calendar-erase-dialog{width:min(90vw,470px);max-height:85vh;border:0;border-radius:13px;padding:20px;background:#f6f9fc;color:#172b43;box-shadow:0 16px 44px #101d33aa}
+.calendar-erase-dialog::backdrop{background:#08172bb8}
+.calendar-erase-dialog h3{margin:0;font-size:21px}
+.calendar-erase-dialog p{margin:12px 0;font-size:16px}
+.calendar-erase-list{display:grid;gap:8px;max-height:52vh;overflow:auto}
+.calendar-erase-list label{display:flex;align-items:center;gap:12px;min-height:44px;padding:8px 10px;border:1px solid #c2cfde;border-radius:8px;background:#fff;font-size:16px;line-height:1.35}
+.calendar-erase-list input{flex:none;width:22px;height:22px;accent-color:#b32247}
+.calendar-erase-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}
+.calendar-erase-actions button{min-height:44px;border:1px solid #8496a9;border-radius:8px;padding:8px 12px;font-size:15px}
+.calendar-erase-actions .danger{background:#25446d;color:#fff!important;border:1px solid #355d89;border-left:4px solid #d54451;font-weight:750}
+.calendar-erase-actions button:disabled{opacity:.45}
+#calendar .calendar-paint-feedback{margin:0 9px 10px;padding:8px 10px;border-radius:7px;background:#dff7ea;color:#145e3d;font-size:13px;font-weight:750}
+#calendar .calendar-paint-feedback.error{background:#ffebed;color:#a01d35}
+@media(max-width:620px){#calendar .calendar-paint-controls{gap:6px;padding:7px 5px 11px}#calendar .calendar-paint-controls label:first-child{flex-basis:calc(100% - 54px)}#calendar .calendar-paint-controls button{flex:1 1 112px}#calendar .calendar-mode-actions button{flex:1 1 0;font-size:12px;padding:7px 3px}#calendar .calendar-paint-feedback{margin-inline:5px}}

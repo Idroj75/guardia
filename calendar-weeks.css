@@ -1,0 +1,25 @@
+/* Full-width month grid based on the approved compact quadrant preview. */
+#calendar .panel:has(#days){background:#102a51;color:#eef3fa;border:1px solid #345779;border-top:3px solid #bc394c;box-shadow:inset 0 0 0 2px #345779,inset 0 12px 19px #071a38a6,0 10px 25px #081b3b47;overflow:hidden}
+#calendar .panel:has(#days) .toolbar{padding:10px 9px;margin:0;background:#102a51;color:#eef3fa}
+#calendar .panel:has(#days) .toolbar .month button{background:#102a51;color:#eef3fa;border:0;font-size:25px}
+#calendar .panel:has(#days) .toolbar .month span{text-transform:uppercase}
+#calendar .panel:has(#days) .detail{color:#d0dbe9;padding:11px 8px}
+#calendar #days{grid-template-columns:25px repeat(7,minmax(0,1fr));gap:0;background:#102a51}
+#calendar #days .weekday{min-width:0;text-align:center;padding:8px 0 6px;background:#173a68;color:#fff;border-bottom:1px solid #4a6d92;font-size:12px;font-weight:800}
+#calendar #days .weekday.calendar-weekend{background:#cf1e33;color:#fff;border-radius:5px 5px 0 0}
+#calendar #days .calendar-week-corner{grid-column:1;background:#173a68;border-right:1px solid #4a6d92;border-bottom:1px solid #4a6d92}
+#calendar #days .calendar-week-number{display:flex;align-items:center;justify-content:center;background:#173a68;color:#dce9fb;border-right:1px solid #4a6d92;font-size:11px;line-height:1;writing-mode:vertical-rl;transform:rotate(180deg)}
+#calendar #days .day,#calendar #days .calendar-outside{box-sizing:border-box;min-width:0;min-height:clamp(104px,20vw,155px);border:1px solid #345779;border-radius:0;margin:-1px 0 0 -1px;padding:4px 3px;box-shadow:inset 0 1px 0 #ffffff55;overflow:hidden}
+#calendar #days .day{background:#dbe5f1;color:#142a40;display:flex;flex-direction:column;align-items:stretch;gap:4px;text-align:left}
+#calendar #days .day.colored-day{background:var(--day-color);color:var(--day-ink)}
+#calendar #days .calendar-outside{background:#1b395e;color:#c1d3e8;text-align:right;font-size:14px}
+#calendar #days .day .date{align-self:flex-end;font-size:16px;line-height:1.1;font-weight:650}
+#calendar #days .day .shift.primary-shift,#calendar #days .day.colored-day .shift.primary-shift{align-self:center;margin-top:12px;background:transparent;color:inherit;padding:0;font-size:clamp(10px,1.7vw,15px);line-height:1.15;text-align:center;overflow-wrap:anywhere}
+#calendar #days .day .calendar-supplement,#calendar #days .day .extension-marker,#calendar #days .day .extra-marker{display:block;width:max-content;max-width:100%;box-sizing:border-box;padding:2px 3px;border:0;border-radius:4px;background:#a91650!important;color:#fff!important;font-size:10px;font-weight:800;line-height:1.15;white-space:normal;overflow-wrap:anywhere;text-overflow:clip}
+#calendar #days .day .court-marker{font-size:12px;padding:3px 5px}
+#calendar #days .day.today,#calendar #days .day.colored-day.today{border:3px solid #d32c49;box-shadow:inset 0 0 0 1px #fff;z-index:1}
+#calendar #days .day.today .date{color:inherit}
+@media(max-width:620px){#calendar>.panel:first-child{margin-inline:-14px;border-radius:0;padding:0;border-left:0;border-right:0}#calendar #days{grid-template-columns:19px repeat(7,minmax(0,1fr))}#calendar #days .day,#calendar #days .calendar-outside{min-height:clamp(90px,22vw,112px);padding:3px 2px;gap:2px}#calendar #days .day .date{font-size:14px}#calendar #days .day .shift.primary-shift,#calendar #days .day.colored-day .shift.primary-shift{font-size:10px;margin-top:11px}#calendar #days .day .calendar-supplement,#calendar #days .day .extension-marker,#calendar #days .day .extra-marker{font-size:9px;padding:2px}#calendar #days .calendar-week-number{font-size:10px}#calendar #days .weekday{font-size:10px}#calendar .panel:has(#days) .toolbar{padding:10px 5px}#calendar .panel:has(#days) .toolbar h3{font-size:16px}#calendar .panel:has(#days) .toolbar .month span{min-width:0;font-size:13px}#calendar .panel:has(#days) .toolbar .month button{padding:4px}}
+
+/* Thin navy grid lines separate the weeks; red is reserved for the weekend and today. */
+#calendar #days .calendar-week-number{border-bottom:1px solid #345779}

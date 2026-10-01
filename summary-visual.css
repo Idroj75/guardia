@@ -1,0 +1,48 @@
+#summary .summary-core{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#summary .trajectory-gift{margin-top:18px}
+#summary .summary-core .card{min-width:0;padding:12px 13px;border-radius:13px}
+#summary .summary-core .card small{display:block;line-height:1.3;color:#435672;font-size:13px}
+#summary .summary-core .card strong{display:block;margin-top:10px;font-size:clamp(20px,5vw,29px);line-height:1.1;overflow-wrap:anywhere}
+#summary .summary-card-base{background:#eaf2fc;border:1px solid #b8d0eb}
+#summary .summary-card-positive{background:#e2f6ea;border:1px solid #9ad2ac}
+#summary .summary-card-negative{background:#ffeced;border:1px solid #eab2bc}
+#summary .summary-card-balance{background:#e9f3fa;border:1px solid #bbd2e7}
+#summary .summary-core .card.negative{background:#ffe4e7;border-color:#d78392}
+#summary .summary-core .card.negative strong{color:#9c2439}
+#summary .summary-balance-grid,#summary .hour-summary-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:11px;margin:10px 0 22px}
+#summary .summary-balance-card{min-width:0;display:block;padding:12px;border:1px solid #c3d3e3;border-radius:12px;background:#f5f9fe;color:#183350;box-shadow:0 2px 7px #102a5110}
+#summary .summary-balance-heading{display:flex;align-items:center;gap:9px;margin-bottom:11px;min-width:0}
+#summary .summary-balance-heading b{flex:none;padding:5px 8px;border-radius:6px;background:#204a77;color:white;font-size:14px}
+#summary .summary-balance-heading span{min-width:0;font-size:15px;font-weight:700;overflow-wrap:anywhere}
+#summary .summary-balance-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+#summary .summary-balance-metric{min-width:0;padding:8px;border-radius:8px;background:#e7f0fa}
+#summary .summary-balance-metric small{display:block;color:#455e78;font-size:12px;line-height:1.2;overflow-wrap:anywhere}
+#summary .summary-balance-metric strong{display:block;margin-top:5px;font-size:16px;line-height:1.15;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+#summary .summary-balance-metric.added{background:#e1f2e8;color:#145e3d}
+#summary .summary-balance-metric.spent{background:#ffebed;color:#93384a}
+#summary .summary-balance-metric.balance{background:#d9f1e4;color:#15583c}
+#summary .summary-balance-card.negative .summary-balance-metric.balance{background:#ffdce1;color:#942039}
+#summary .summary-balance-carousel{display:flex;align-items:center;gap:8px;margin:8px 0 16px}
+#summary .summary-balance-carousel>button{flex:none;width:38px;height:44px;padding:0;border:1px solid #a9bfd8;border-radius:10px;background:#e7f0fa;color:#153a63;font-size:28px;line-height:1}
+#summary .summary-balance-carousel>button:disabled{opacity:.35;cursor:default}
+#summary .summary-balance-carousel>button:focus-visible,#summary .summary-balance-grid:focus-visible{outline:3px solid #d02c47;outline-offset:2px}
+#summary .summary-balance-carousel .summary-balance-grid{display:flex;flex:1;min-width:0;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;margin:0;border-radius:12px}
+#summary .summary-balance-carousel .summary-balance-grid::-webkit-scrollbar{display:none}
+#summary .summary-balance-carousel .summary-balance-card{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
+#summary .summary-balance-position{text-align:center;color:#45627f;font-weight:700;font-size:14px;margin:-7px 0 18px;font-variant-numeric:tabular-nums}
+#summary .summary-help{margin-top:18px}
+#summary .summary-help summary{cursor:pointer;padding:4px 0;font-size:18px;font-weight:800;color:#173b65}
+#summary .summary-help summary:focus-visible{outline:3px solid #c13248;outline-offset:3px}
+#summary .summary-help-content{max-width:740px;margin-top:13px;color:#34475d;line-height:1.55}
+#summary .summary-help-content h4{margin:20px 0 7px;color:#142f51}
+#summary .summary-help-content p{margin:8px 0}
+@media(min-width:740px){#summary .summary-work{grid-template-columns:repeat(4,minmax(0,1fr))}#summary .summary-permissions{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:360px){#summary .summary-core .card{padding:10px}#summary .summary-core .card small{font-size:12px}#summary .summary-balance-card{padding:9px}}
+#summary .summary-annual-form{display:grid;gap:7px;margin-top:10px;min-width:0}
+#summary .summary-annual-form[hidden],#summary #annualWorkEdit[hidden],#summary #annualWorkCancel[hidden]{display:none}
+#summary .summary-annual-form label{display:grid;gap:5px;font-size:14px}
+#summary .summary-annual-form input{box-sizing:border-box;width:100%;min-width:0;max-width:100%;padding:8px;border:1px solid #8ba2bd;border-radius:7px;font-size:16px}
+#summary #annualWorkEdit{margin-top:10px}
+#summary #annualWorkFeedback{font-size:14px;overflow-wrap:anywhere;margin:8px 0 0}
+#summary #annualWorkFeedback:empty{display:none}
+#summary .summary-annual-form button,#summary #annualWorkEdit{min-height:40px;padding:7px 10px;font-size:14px}

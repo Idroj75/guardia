@@ -1,0 +1,29 @@
+.service-stats-header{margin-top:18px}
+.service-stats-header h3{font-size:20px}
+.service-stats-list{display:grid;gap:8px;margin:10px 0 24px}
+.service-stats-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid #c7d7e8;border-radius:12px;background:#eaf1f9;color:#173653}
+.service-stats-row strong{overflow-wrap:anywhere}
+.service-stats-row span{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.service-static-option{display:flex!important;align-items:center;gap:10px;font-weight:700}
+.service-static-option input{width:22px;height:22px;flex:none;accent-color:#c92d40}
+.service-list-filter{display:grid;gap:5px;max-width:420px;margin:12px 0;color:#173653;font-weight:700}
+.service-list-filter select{width:100%;padding:10px;border:1px solid #9bb1c9;border-radius:10px;background:#fff;color:#173653;font:inherit}
+.service-list-total{font-weight:700;color:#173653;margin:12px 0}
+.service-list-rows{display:grid;gap:6px;max-height:340px;overflow:auto;margin-bottom:24px}
+.service-list-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid #c7d7e8;border-radius:10px;background:#f4f7fb;color:#173653}
+.service-list-row strong{flex:1;overflow-wrap:anywhere}
+.service-static-badge{background:#bd293d;color:white;padding:3px 8px;border-radius:8px;font-size:13px;font-weight:700}
+.service-simple-panel{margin-bottom:16px}
+.service-action-bar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.service-action-bar button{width:100%;min-height:72px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.service-create-button{border:1px solid #a9142b;border-radius:14px;background:#c82440;color:white;padding:12px;font-size:19px;font-weight:800;box-shadow:0 6px 16px #55102430}
+.service-secondary-button{border:1px solid #9bb1c9;border-radius:14px;background:#e8eff7;color:#173653;padding:12px;font-size:16px;font-weight:750;box-shadow:0 3px 9px #122b4716}
+.service-action-bar .service-secondary-button[aria-expanded="true"]{background:#24466c;color:#fff;border-left:4px solid #d12f43}
+.service-work-panel{background:#f1f5fa;border:1px solid #ccdaea}
+.service-simple-panel .service-form{margin:14px 0 0}
+.service-simple-panel .service-catalog-list{margin-bottom:0}
+.service-optional{border:1px solid #c7d7e8;border-radius:10px;padding:10px 12px;background:#fff}
+.service-optional summary{cursor:pointer;font-weight:700;color:#173653}
+.service-optional label{display:block;margin-top:10px}
+.service-optional input{width:100%}
+@media(max-width:540px){.service-stats-row{align-items:start;flex-direction:column;gap:2px}.service-stats-row span{text-align:left}}

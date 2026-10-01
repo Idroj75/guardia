@@ -1,0 +1,26 @@
+/* Keep the month above the tools while this screen is active on touch devices. */
+#calendar #days{touch-action:none}
+#calendar #days{grid-template-columns:repeat(7,minmax(0,1fr))}
+#calendar #days .calendar-week-corner,#calendar #days .calendar-week-number{display:none}
+#calendar .calendar-paint-controls{border-top:0;margin-top:12px;position:relative}
+#calendar .calendar-paint-controls::before{content:"";position:absolute;left:0;right:0;top:-9px;height:6px;background:#b8293b;box-shadow:0 1px 2px #071a3844;pointer-events:none}
+#calendar .calendar-control-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (max-width:950px){
+  body:has(#calendar.active){overflow:hidden;height:100dvh;overscroll-behavior:none}
+  body:has(#calendar.active) main{padding:0;max-width:none}
+  #calendar.active{height:calc(100dvh - var(--guardia-header-height, 0px));min-height:0;overflow:hidden}
+  #calendar.active>.panel:has(#days){height:100%;min-height:0;display:flex;flex-direction:column;padding:0;margin:0;border-radius:0;position:relative}
+  #calendar.active .toolbar{flex:none}
+  #calendar.active #days{flex:1 1 0;min-height:0;overflow:hidden;grid-template-rows:30px repeat(var(--calendar-weeks, 5),minmax(0,1fr));align-content:stretch}
+  #calendar.active #days .day,#calendar.active #days .calendar-outside{min-height:0;height:100%}
+  #calendar.active #days .calendar-week-number{min-height:0;overflow:hidden}
+  #calendar.active .calendar-paint-controls{flex:none;padding-bottom:max(9px,env(safe-area-inset-bottom));overflow:visible}
+  #calendar.active .calendar-paint-feedback,#calendar.active .cycle-auto-notice{position:absolute;bottom:170px;left:8px;right:8px;z-index:3;margin:0;box-shadow:0 5px 18px #0a1b3650}
+}
+@media (max-width:950px) and (max-height:650px){
+  body:has(#calendar.active){overflow:auto;height:auto}
+  #calendar.active{height:auto;overflow:visible}
+  #calendar.active>.panel:has(#days){height:auto}
+  #calendar.active #days{flex:none;grid-template-rows:30px repeat(var(--calendar-weeks, 5),minmax(74px,auto));overflow:visible}
+  #calendar.active #days .day,#calendar.active #days .calendar-outside{min-height:74px}
+}

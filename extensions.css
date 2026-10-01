@@ -1,0 +1,15 @@
+.extension-marker{display:block;border-radius:.4rem;padding:.15rem .25rem;background:#d7eff8;color:#12445b;font-size:.7rem;font-weight:800;line-height:1.2;overflow-wrap:anywhere}
+.extension-fixed-type{border-left:4px solid #2188ab;padding-left:.65rem}
+.day-intervals{margin-top:1rem;padding-top:.85rem;border-top:1px solid #d5e0ed}
+.day-intervals summary{cursor:pointer;color:#173758;font-weight:800;padding:.45rem 0}
+.day-intervals-list{display:grid;gap:.55rem;margin-top:.7rem}
+.day-interval-row{display:grid;gap:.55rem;padding:.7rem;border:1px solid #cbdbea;border-radius:.7rem;background:#f0f6fb;color:#173453}
+.day-interval-description{font-weight:650;overflow-wrap:anywhere}
+.day-interval-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+.day-interval-actions button{min-height:2.4rem;border:1px solid #b8cad9;border-radius:.55rem;padding:.35rem .75rem;background:#fff;color:#173453;font:inherit;font-weight:650}
+.day-interval-actions button.danger{border-color:#d798a5;background:#fff3f4;color:#9e243a}
+@media(max-width:600px){.day-interval-actions button{flex:1}}
+.day-interval-inline-editor{display:grid;gap:.65rem;border-top:1px solid #cbdbea;padding-top:.65rem}
+.day-interval-inline-editor label{display:grid;gap:.3rem;font-weight:700}
+.day-interval-inline-editor input,.day-interval-inline-editor select{box-sizing:border-box;width:100%;min-height:2.7rem;padding:.55rem;border:1px solid #9eb4c9;border-radius:.55rem;background:#fff;color:#173453;font:inherit;font-size:1rem}
+.day-interval-error{margin:0;color:#a3293d;font-weight:700}

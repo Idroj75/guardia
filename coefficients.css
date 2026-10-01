@@ -1,0 +1,24 @@
+#coefficients .coefficient-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#coefficients .coefficient-grid label{display:grid;gap:5px;font-weight:650}
+#coefficients [hidden]{display:none!important}
+#coefficients .coefficient-grid input,#coefficients .coefficient-grid select{width:100%;min-width:0}
+#coefficients .coefficient-factor-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+#coefficients .coefficient-factor-card{min-width:0;margin:0;padding:12px;border:2px solid;border-radius:15px;display:grid;gap:12px;align-content:start}
+#coefficients .coefficient-factor-card legend{padding:0 5px;font-size:1.05rem;font-weight:850}
+#coefficients .coefficient-factor-card label{display:grid;gap:5px;font-weight:650;line-height:1.25;min-width:0}
+#coefficients .coefficient-factor-card input{width:100%;min-width:0;background:#fff}
+#coefficients .coefficient-earn{background:#e7f6ec;border-color:#8ccb9e;color:#174d32}
+#coefficients .coefficient-spend{background:#fff0f0;border-color:#e6a7ab;color:#84323e}
+#coefficients .coefficient-night-fields{margin:16px 0}
+#coefficients .coefficient-wide{grid-column:1/-1}
+#coefficients .coefficient-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+#coefficients .coefficient-preview{background:#dce9f5;color:#132c4d;border-radius:12px;padding:15px;margin:16px 0;font-weight:700;line-height:1.5}
+#coefficients .coefficient-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid #c7d4e3;padding:13px 0}
+#coefficients .coefficient-entry div:first-child{display:grid;gap:5px;min-width:0}
+#coefficients .coefficient-entry small{color:#50647d;font-size:.88rem;line-height:1.35}
+#coefficients .coefficient-entry div:last-child{display:flex;gap:6px;flex-shrink:0}
+#coefficients .coefficient-entry button{padding:8px;border-radius:9px}
+#calendar #days .day .calendar-supplement.coefficient-marker{background:var(--coefficient-color)!important;color:var(--coefficient-ink)!important}
+#coefficients .coefficient-back{margin:0 0 14px;padding:11px 15px;background:#25446d;color:#fff;border:1px solid #476588;border-left:4px solid #d54451;border-radius:10px;font-weight:750}
+@media(max-width:550px){#coefficients .coefficient-entry{align-items:flex-start;flex-direction:column}#coefficients .coefficient-entry div:last-child{width:100%}}
+@media(max-width:550px){#coefficients .coefficient-factor-columns{gap:7px}#coefficients .coefficient-factor-card{padding:9px;gap:10px}#coefficients .coefficient-factor-card legend{font-size:.95rem}#coefficients .coefficient-factor-card label{font-size:.82rem}}

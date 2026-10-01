@@ -1,0 +1,13 @@
+.guardia-color-open{width:48px;height:42px;flex:none;border:2px solid #203e64;border-radius:9px;box-shadow:inset 0 0 0 2px #fff,0 2px 6px #102a5130;font-size:23px;font-weight:800;cursor:pointer;vertical-align:middle}
+input[type=color][data-guardia-color-enhanced]{position:absolute!important;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;opacity:0!important;pointer-events:none!important}
+.form input[type=color]+.guardia-color-open{justify-self:start;margin-top:4px}
+.fixed-color-input+.guardia-color-open{width:38px;height:38px;font-size:18px}
+#calendar .calendar-paint-controls .guardia-color-open{flex:0 0 42px;width:42px;min-width:42px;min-height:42px;padding:0;border:2px solid #e9eef5;font-size:19px}
+.guardia-color-open:focus-visible,.guardia-color-choice:focus-visible{outline:3px solid #d54451;outline-offset:2px}
+.guardia-color-dialog{width:min(92vw,400px);max-height:85dvh;border:2px solid #25446d;border-radius:18px;background:#f7faff;color:#172b43;padding:18px;box-shadow:0 20px 55px #07182c88}
+.guardia-color-dialog::backdrop{background:#06162abc}
+.guardia-color-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.guardia-color-head h3{margin:0 0 15px}.guardia-color-close{border:0;background:transparent;color:#183651;font-size:28px;line-height:1}
+.guardia-color-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.guardia-color-choice{height:49px;border:2px solid #ffffff;border-radius:10px;box-shadow:0 0 0 1px #8296af;cursor:pointer}
+.guardia-color-custom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:17px;font-weight:700}
+.guardia-color-custom input[type=color]{width:64px;height:44px;min-height:44px;padding:2px;background:#fff;border:1px solid #98abc3;border-radius:8px}

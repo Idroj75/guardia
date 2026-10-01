@@ -1,0 +1,30 @@
+/* Three clear editors share the shift screen; historical hour records stay intact. */
+.hour-type-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:14px}
+.hour-type-tabs button{min-height:46px;padding:7px 6px;background:#102a51;color:#e5effd;border:1px solid #476588;border-radius:9px;font-weight:760;line-height:1.2}
+.hour-type-tabs button[aria-selected="true"]{background:#25446d;border-left:4px solid #d54451;color:#fff;box-shadow:inset 0 1px 0 #ffffff2a,0 4px 10px #0b214040}
+#types .type-hero{flex-wrap:wrap}
+#types .type-add-button{margin-left:auto;min-height:56px;padding:10px 18px;border:2px solid #f17b87;border-radius:13px;background:#d12f43;color:#fff;box-shadow:0 5px 14px #5e071b66;font-size:18px;font-weight:800;white-space:nowrap}
+#types .type-add-button:hover{background:#bb2037}
+#types .type-add-button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+#types .grid2:has(> .panel[hidden]){display:block}
+#types .grid2:has(> .panel[hidden])>.panel{width:100%}
+#types .save-feedback{margin:0 0 14px}
+.hour-concept-panel .type-hero{margin-bottom:16px}
+.hour-concept-panel .grid2{align-items:start}
+.hour-concept-panel [hidden],#types [hidden],#hourDestinationWrap[hidden]{display:none!important}
+.hour-concept-row{display:flex;align-items:center;gap:9px;justify-content:space-between;padding:11px 5px;border-bottom:1px solid #d4dfeb;color:#183451}
+.hour-concept-row>span:first-of-type{min-width:0;flex:1;overflow-wrap:anywhere}
+.hour-concept-row>span:last-child{display:flex;flex-wrap:wrap;gap:5px;justify-content:flex-end}
+.hour-concept-row i{width:18px;height:18px;flex:none;border-radius:4px;border:1px solid #849ab2}
+.hour-concept-row button{padding:6px 8px;border-radius:6px;border:1px solid #aac0d8;background:#eef3fa;color:#1b3c63;font-size:13px;font-weight:700}
+.hour-concept-row button:hover{background:#dceaf8}
+.annual-balance-panel{margin-bottom:16px}
+.annual-balance-form{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:10px 0}
+.annual-balance-form label{display:grid;gap:5px;min-width:150px;flex:1}
+.annual-balance-form input{max-width:230px}
+.balance-archived{opacity:.66}
+.hour-summary-list{display:grid;gap:7px}
+.hour-summary-row{display:grid;gap:4px;padding:10px;border-radius:8px;background:#eef4fc;color:#1a385b;font-size:14px}
+.hour-summary-row span{font-variant-numeric:tabular-nums}
+#calendar #days .hour-concept-marker{background:#fff!important;color:#173b66!important;box-shadow:0 1px 3px #0b234e46}
+@media(max-width:620px){.hour-type-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.hour-type-tabs button{font-size:14px}#types .type-add-button{width:100%;margin-left:0}.hour-concept-row{flex-wrap:wrap}.hour-concept-row>span:last-child{margin-left:auto}}

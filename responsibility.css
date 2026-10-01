@@ -1,0 +1,23 @@
+.brand-rank{display:flex;flex-direction:column;align-items:center;align-self:center;margin-left:auto;gap:4px;min-width:0;max-width:110px;text-align:center}
+.brand-rank #brandCategory{font-size:14px;line-height:1.15;font-weight:750;color:#eef4ff;overflow-wrap:anywhere}
+.brand-rank .brand-tenure-stars{margin:0}
+#responsibility>.panel{margin-bottom:18px}
+#responsibility [hidden]{display:none!important}
+#responsibility .month{flex-wrap:wrap}
+#responsibility input[type=month]{max-width:180px;min-width:0}
+#responsibility .resp-stats{margin:18px 0}
+.resp-list,.resp-draft{display:grid;gap:10px;margin:16px 0}
+.resp-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border:1px solid #bccfe2;border-radius:12px;padding:14px;background:#f5f9ff}
+.resp-row p{margin:6px 0;overflow-wrap:anywhere}
+.resp-actions{display:flex;flex-wrap:wrap;gap:8px}
+.resp-actions button{min-height:40px;font-size:14px}
+.resp-paid{color:#17643f;font-weight:750}.resp-pending{color:#a22b40;font-weight:750}
+.resp-draft-row{display:grid;grid-template-columns:24px minmax(95px,1fr) minmax(90px,1fr) minmax(85px,1fr) minmax(75px,1fr);gap:10px;align-items:center;padding:10px;border:1px solid #c9d8e8;border-radius:9px;background:#f3f8ff}
+.resp-draft-row label,.resp-rate-fields label{display:grid;gap:5px;font-size:14px;font-weight:650}
+.resp-draft-row input{width:100%;min-width:0;box-sizing:border-box}.resp-draft-row input[type=checkbox]{width:20px;height:20px}
+.resp-rate-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#responsibility summary{font-weight:750;font-size:17px;cursor:pointer}
+#respPaymentDialog{max-width:440px;width:85vw;border:0;border-radius:14px;padding:20px;color:#183653}
+#respPaymentDialog label{display:grid;gap:7px;margin:15px 0}
+#respFeedback:not(:empty){font-weight:700;margin-top:12px}
+@media(max-width:620px){.brand-rank{max-width:85px}.brand-rank #brandCategory{font-size:14px}.resp-draft-row{grid-template-columns:24px 1fr 1fr}.resp-draft-row>strong:last-child{grid-column:2/4}.resp-rate-fields{grid-template-columns:1fr}#responsibility .toolbar{flex-wrap:wrap}#responsibility .resp-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
