@@ -74,6 +74,17 @@
     }
     return item;
   }
+  function automaticSpecial(row){
+    const year=policeYear(new Date(row.date+'T12:00:00'));
+    if(!row.automaticPreset&&!state.specialSeeded?.[year])return false;
+    const preset=specialPresetRows(year).find(item=>item[0]===row.date);
+    if(!preset)return false;
+    const [,name,start,end,rate]=preset;
+    const known=new Set(['id','date','name','start','end','rate','color','paid','extraHours','overrideHours','automaticPreset']);
+    return row.name===name&&row.start===start&&row.end===end&&Number(row.rate)===rate&&
+      row.color==='#e68a20'&&row.paid===false&&Number(row.extraHours)===0&&row.overrideHours==null&&
+      Object.keys(row).every(key=>known.has(key));
+  }
   function prepare(){
     const start=$('quadGenStart').value,end=$('quadGenEnd').value,first=dateMs(start),last=dateMs(end),kind=$('quadGenType').value,squad=$('quadGenSquad').value;
     if(!Number.isFinite(first)||!Number.isFinite(last)||first>last)return {error:'Tria una data inicial i una final vàlides.'};
@@ -88,7 +99,8 @@
       const leave=!!state.leave[date];
       const recorded=date<today&&(oldIds.length>0||state.cycleRest[date]||state.services?.[date]||
         (Array.isArray(state.dayComments)?state.dayComments.some(r=>r.date===date):!!state.dayComments?.[date])||
-        [state.accruals,state.hourEntries,state.overtime,state.citations,state.specialDays,state.detentions].some(list=>Array.isArray(list)&&list.some(r=>r.date===date)));
+        [state.accruals,state.hourEntries,state.overtime,state.citations,state.detentions].some(list=>Array.isArray(list)&&list.some(r=>r.date===date))||
+        (state.specialDays||[]).some(r=>r.date===date&&!automaticSpecial(r)));
       if(leave||recorded){protectedDays++;continue}
       const existing=oldIds.length===1?state.types.find(t=>t.id===oldIds[0]):null;
       const same=code==='F'?!oldIds.length&&!!state.cycleRest[date]:

@@ -5,7 +5,7 @@
       'Tria un torn, un permís o un concepte d’hores al selector i toca els dies per pintar-los. El color de cada torn es canvia a «Torn» i es mostra al calendari. Els permisos també tenen el seu color configurat a «Torn».',
       'Un mateix dia pot tenir torn, hores de BL, perllongament i ticket. Escriu les hores variables en format hores:minuts, per exemple 2:30. La BC es gestiona a «Torn» → «BC · Coeficients».',
       'Fes lliscar el mes cap als costats per avançar o retrocedir. «Desfer» recupera els darrers tocs. Amb «Consultar» veus els detalls; amb «Editar» gestiones els intervals, i amb «Esborrar dia» tries què vols treure.',
-      'Les caselles mostren el nom del torn sense les hores de durada, també quan generes un quadrant. Les hores continuen disponibles en consultar el dia i es compten als totals.',
+      'Les caselles mostren el nom del torn sense les hores de durada, també quan generes un quadrant. Els noms acabats en «12 h» es mostren sense aquest text a la casella. Les hores continuen disponibles en consultar el dia i es compten als totals.',
       'Prem «Comentaris»: el botó queda blau. Després toca el dia on vols apuntar el ticket i s’obrirà el formulari amb aquella data. Canvia a «Editar», «Consultar», «Esborrar dia» o tria un torn per sortir d’aquest mode. No es poden crear tickets en dies passats.',
       'El dia d’avui té un marc vermell. Els judicis i els dies especials apareixen al calendari, però les seves fitxes es gestionen a les pestanyes pròpies.'
     ]},
@@ -31,7 +31,7 @@
     {title:'Quadrants',items:[
       'Indica «Des del dia» i «Fins al dia» per generar el quadrant dins d’aquest interval. Pots posar de l’1 de febrer al 31 de gener per crear un any complet, o un interval més curt per canviar de torn o escamot.',
       'Tria el quadrant i l’escamot: Q5 té escamots 1 a 5 i Q3 té A, B i C. Prem «Generar» i confirma el canvi.',
-      'El nou torn apareix al Calendari amb els colors configurats a «Torn», sense crear duplicats si el torn ja existeix. Els permisos i els dies passats amb dades apuntades es conserven; altres anotacions com judicis i tickets també es mantenen. A «Totals» veuràs les hores planificades i el romanent actualitzats.',
+      'El nou torn apareix al Calendari amb els colors configurats a «Torn», sense crear duplicats si el torn ja existeix. Els permisos i els dies passats amb dades apuntades es conserven. Un dia especial automàtic, sense modificacions ni dades introduïdes, no impedeix generar el torn encara que sigui passat; altres anotacions com judicis i tickets també es mantenen. A «Totals» veuràs les hores planificades i el romanent actualitzats.',
       'El Q3 repeteix tres setmanes: tardes de dilluns a divendres i cap de setmana lliure; matins de dilluns a divendres i cap de setmana de 12 hores; festa completa. Les hores dels matins i les tardes són les del torn configurat a «Torn». Referència de la rotació: dilluns 3 de febrer de 2025, A tardes, B matins i C festa. La rotació continua entre anys. El Q5 manté el patró facilitat; contrasta el calendari amb el quadrant oficial.',
       'Els altres quadrants, inclosos 7×7, Q5 de Trànsit i Oficina, es poden planificar manualment al Calendari perquè depenen del grup, l’ABP, la unitat i els horaris de servei.'
     ]},
